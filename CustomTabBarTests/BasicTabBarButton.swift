@@ -8,11 +8,30 @@
 import SwiftUI
 
 struct BasicTabBarButton: View {
+    
+    
+    @Binding var selectedTab:TabChoices
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        //Needed to obtain the midpoint of beach button to be used in the curve animation
+        GeometryReader{ geometry in
+            
+            Button(){
+                print("Hello World!")
+            }label: {
+                Image(selectedTab.rawValue)
+                    .renderingMode(.template)
+                    .foregroundColor(.green)
+            }
+            //Max Button Frame
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            
+            
+            
+            
+            
+            
+        }
     }
 }
 
-#Preview {
-    BasicTabBarButton()
-}

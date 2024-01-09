@@ -9,7 +9,10 @@ import SwiftUI
 
 struct SampleView1: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack{
+            Text("Hello, World Its View 1!")
+            
+        }.frame(width: 400, height: 800).background(Color.purple)
     }
 }
 
